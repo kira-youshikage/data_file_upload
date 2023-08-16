@@ -7,3 +7,6 @@
 选择了PostgreSQL数据库作为数据仓库，并进行数据架构的设计。我们将数据存储在不同层级，包括ODS（原始数据层）、DMS（全量数据层）和DELTA（增量数据层）。
 这套程序可以处理每个FTP或共享文件夹中的文件。通过检测文件名、时间和大小，我们可以判断是否有新的数据文件生成。如果有新的数据文件，我们会将其上传到ODS层。
 根据业务需求，我们对ODS层的数据进行清洗和处理，并将其推送到DMS层和DELTA层。最后，利用ThoughtSpot的Dataflow功能，我们将DELTA层的数据推送到ThoughtSpot，以供用户查询和分析。
+
+## 流程图
+![](database_table_config/process.png)
